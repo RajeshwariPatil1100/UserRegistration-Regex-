@@ -1,2 +1,36 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+using System.Text.RegularExpressions;//namespace for regex
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace UserRegistration_Regex_ 
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine("User Registration Problem using REGEX");
+                Console.WriteLine("1.First Name\n2.");
+                int check = Convert.ToInt32(Console.ReadLine());
+                switch (check)
+                {
+                    case 1:
+                        FirstName uc1 = new FirstName();
+                        uc1.First();
+                        break;
+                    default:
+                        flag = false;
+                        break;
+
+                }
+            }
+        }
+
+    }
+}
