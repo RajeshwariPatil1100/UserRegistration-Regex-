@@ -16,7 +16,7 @@ namespace UserRegistration_Regex_
             while (flag)
             {
                 Console.WriteLine("User Registration Problem using REGEX");
-                Console.WriteLine("1.First Name\n2.");
+                Console.WriteLine("1.First Name\n2.Last Nmae\n");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -24,10 +24,13 @@ namespace UserRegistration_Regex_
                         FirstName uc1 = new FirstName();
                         uc1.First();
                         break;
+                    case 2:
+                        LastName uc2 = new LastName();
+                        uc2.Last();
+                        break;
                     default:
                         flag = false;
                         break;
-
                 }
             }
         }
