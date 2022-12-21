@@ -28,6 +28,12 @@ namespace UserRegistration_Regex_
                         LastName uc2 = new LastName();
                         uc2.Last();
                         break;
+
+                    case 3:
+                        phoneNumber uc4 = new phoneNumber();
+                        uc4.PhnNum();
+                        break;
+
                     default:
                         flag = false;
                         break;
