@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Mail;
 
 
 namespace UserRegistration_Regex_ 
@@ -16,7 +17,7 @@ namespace UserRegistration_Regex_
             while (flag)
             {
                 Console.WriteLine("User Registration Problem using REGEX");
-                Console.WriteLine("1.First Name\n2.Last Nmae\n");
+                Console.WriteLine("1.First Name\n2.Last Name\n3.Phone Number\n4. Email Address");
                 int check = Convert.ToInt32(Console.ReadLine());
                 switch (check)
                 {
@@ -32,6 +33,10 @@ namespace UserRegistration_Regex_
                     case 3:
                         phoneNumber uc4 = new phoneNumber();
                         uc4.PhnNum();
+                        break;
+                    case 4:
+                        EmailAddress email = new EmailAddress();
+                        email.Email();
                         break;
 
                     default:
