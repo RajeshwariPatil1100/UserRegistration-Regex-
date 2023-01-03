@@ -13,18 +13,18 @@ namespace UserRegistration_Regex_
         {
             Console.WriteLine("Enter Mobile Number");
             var data = Console.ReadLine();
-            string pattern = "^[+][0-9]{1,3}[ ][6-9]{1}[0-9]{9}$";//for start^ end $
+            string pattern = "^[+][0-9]{1,3}[ ][6-9]{1}[0-9]{9}$";
             Regex regex = new Regex(pattern);
-            if (regex.IsMatch(data))//match method call from inbuild Regex class
+            if (regex.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(data + " It's a Valid Number");
+                Console.WriteLine(data + " It Is A Valid Phone Number");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(data + " It's a InValid Number");
+                Console.WriteLine(data + " It Is An Invalid Phone Number");
                 Console.ResetColor();
             }
         }

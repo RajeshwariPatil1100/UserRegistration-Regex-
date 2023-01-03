@@ -11,23 +11,22 @@ namespace UserRegistration_Regex_
     {
         public void First()
         {
-            Console.WriteLine(" Enter User First Name");
+            Console.WriteLine("Enter User First Name");
             var data = Console.ReadLine();
             string pattern = "[A-Z]{1}[a-z]{2,}";
             Regex regex = new Regex(pattern);
-            if (regex.IsMatch(data))//match method call from inbuild Regex class
+            if (regex.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(data + " It's a Valid First Name");
+                Console.WriteLine(data + " It Is A Valid First Name");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(data + " It's a InValid First Name");
+                Console.WriteLine(data + " It Is An Invalid First Name");
                 Console.ResetColor();
             }
-
         }
     }
 }

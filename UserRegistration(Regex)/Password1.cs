@@ -11,22 +11,22 @@ namespace UserRegistration_Regex_
     {
          public void Pass()
             {
-                Console.WriteLine("Enter User Password");
-                var data = Console.ReadLine();
-                string pattern = "[A-Za-z0-9]{8,}";
-                Regex regex = new Regex(pattern);
-                if (regex.IsMatch(data))
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(data + " It Is A Valid Password");
-                    Console.ResetColor();
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(data + " It Is An Invalid Password");
-                    Console.ResetColor();
-                }
+            Console.WriteLine("Enter User Password");
+            var data = Console.ReadLine();
+            string pattern = "^(?=.*?[A-Z]).{8,}$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " It Is A Valid Password");
+                Console.ResetColor();
             }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " It Is An Invalid Password");
+                Console.ResetColor();
+            }
+        }
         }
 }

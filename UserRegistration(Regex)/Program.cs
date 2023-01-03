@@ -22,30 +22,29 @@ namespace UserRegistration_Regex_
                 switch (check)
                 {
                     case 1:
-                        FirstName uc1 = new FirstName();
-                        uc1.First();
+                        FirstName firstName = new FirstName();
+                        firstName.First();
                         break;
                     case 2:
-                        LastName uc2 = new LastName();
-                        uc2.Last();
+                        LastName lastName = new LastName();
+                        lastName.Last();
                         break;
-
                     case 3:
-                        phoneNumber uc4 = new phoneNumber();
-                        uc4.PhnNum();
-                        break;
-                    case 4:
                         EmailAddress email = new EmailAddress();
                         email.Email();
+                        break;
+                    case 4:
+                        phoneNumber phoneNumber = new phoneNumber();
+                        phoneNumber.PhnNum();
                         break;
                     case 5:
                         Password1 password1 = new Password1();
                         password1.Pass();
                         break;
-
                     default:
                         flag = false;
                         break;
+
                 }
             }
         }
